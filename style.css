@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(217, 12%, 63%);
+  background-color: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.card {
+  width: 330px;
+  margin: 155px auto;
+  padding: 27px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 22px;
+}
+
+.star {
+  width: fit-content;
+  margin-bottom: 27px;
+  padding: 10px;
+  background-color: hsla(216, 12%, 54%, 0.2);
+  border-radius: 50%;
+}
+
+.card__title {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: hsl(0, 0%, 100%);
+}
+
+.card__text {
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.rating__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.rating__btns li {
+  width: 40px;
+  aspect-ratio: 1;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  background-color: hsla(216, 12%, 54%, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+.rating__btns li:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+
+.selected {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(217, 12%, 63%);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: hsl(25, 97%, 53%);
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+button:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card__thank {
+  display: none;
+  padding: 35px 25px;
+}
+
+.thank__img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.icon {
+  width: 130px;
+}
+
+.info__rating {
+  width: 160px;
+  margin: 0 auto 25px;
+  padding: 3px;
+  font-size: 14px;
+  color: hsl(25, 97%, 53%);
+  text-align: center;
+  background-color: hsla(216, 12%, 54%, 0.2);
+  border-radius: 50px;
+}
+
+.card__thank h1 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.card__thank .card__text {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
