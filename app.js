@@ -3,31 +3,29 @@ const cardThank = document.querySelector(".card__thank");
 const submitBtn = document.querySelector(".submit__btn");
 const listRating = document.querySelector(".rating__btns");
 const infoRating = document.querySelector(".info__rating");
-let ratingValue;
+const selectedRating = document.querySelector(".selected__rating");
 
 const getListRating = () => {
   let circles = [];
   for(let i = 1; i <= 5; i++) {
     let li = document.createElement("li");
-    li.value = i;
     li.append(i);
     circles.push(li);
-
-    circles.forEach((circle) => {
-      circle.addEventListener("change", (e) => {
-        ratingValue = e.target.value;
-      })
-    })
   }
-  
   return circles;
 }
 
 listRating.append(...getListRating());
 
-
+const ratings = document.querySelectorAll("li");
+ratings.forEach((rating) => {
+  rating.addEventListener("click", () => {
+    selectedRating.innerHTML = rating.innerHTML;
+    rating.classList.toggle("selected");
+  });
+});
 
 submitBtn.addEventListener("click", () => {
   cardRating.style.display = "none";
   cardThank.style.display = "block";
-})
+});
