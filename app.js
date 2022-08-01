@@ -21,7 +21,10 @@ const ratings = document.querySelectorAll("li");
 ratings.forEach((rating) => {
   rating.addEventListener("click", () => {
     selectedRating.innerHTML = rating.innerHTML;
-    rating.classList.toggle("selected");
+    ratings.forEach(e => {
+      e.classList.contains("selected") && e.classList.remove(e.classList)
+    })
+    rating.classList.add("selected");
   });
 });
 

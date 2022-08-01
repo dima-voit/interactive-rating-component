@@ -152,6 +152,7 @@ button:hover {
 }
 
 .attribution {
+  padding: 20px;
   font-size: 11px;
   text-align: center;
 }
